@@ -5,6 +5,10 @@
 const gameField = document.querySelector('.game-field')
 const scoreDisplay = document.querySelector('#score')
 const startBtn = document.querySelector('#start-btn')
+const upBtn = document.querySelector('#up-btn')
+const leftBtn = document.querySelector('#left-btn')
+const rightBtn = document.querySelector('#right-btn')
+const downBtn = document.querySelector('#down-btn')
 let squares = Array.from(document.querySelectorAll('.game-field div'))
 
 
@@ -240,6 +244,26 @@ function startPauseHandler(e) {
     if (e.key === ' ') startPause()
 }
 
+upBtn.addEventListener('click', rotate)
+leftBtn.addEventListener('click', moveLeft)
+rightBtn.addEventListener('click', moveRight)
+downBtn.addEventListener('click', moveDown)
+
+
+function lockControls() {
+    upBtn.setAttribute('disabled', 'disabled')
+    leftBtn.setAttribute('disabled', 'disabled')
+    rightBtn.setAttribute('disabled', 'disabled')
+    downBtn.setAttribute('disabled', 'disabled')
+}
+
+function unlockControls() {
+    upBtn.removeAttribute('disabled')
+    leftBtn.removeAttribute('disabled')
+    rightBtn.removeAttribute('disabled')
+    downBtn.removeAttribute('disabled')
+}
+
 ///////////////////////////////////////
 // START/PAUSE
 let timer = null
@@ -247,10 +271,12 @@ let timer = null
 function startPause() {
     if (timer) {
         document.removeEventListener('keyup', movementsHandler) // block movement controls when paused
+        lockControls()
         clearInterval(timer)
         timer = null
     } else {
         document.addEventListener('keyup', movementsHandler) // unblock movement controls
+        unlockControls()
         draw()
         timer = setInterval(moveDown, speed(score))
     }
@@ -313,6 +339,7 @@ function displayPreview() {
 function init() {
     startBtn.addEventListener('click', startPause)
     document.addEventListener('keyup', startPauseHandler)
+    lockControls()
 
     draw()
     displayPreview()

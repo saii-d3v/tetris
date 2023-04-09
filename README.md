@@ -1,8 +1,8 @@
 https://saii-d3v-tetris.netlify.app
 
-arrowUp/W - rotate
-arrowLeft/A - move left
-arrowRight/D - move right
-arrowDown/S - move down
+arrowUp/W - rotate\n
+arrowLeft/A - move left\n
+arrowRight/D - move right\n
+arrowDown/S - move down\n
 
 spacebar - start/pause

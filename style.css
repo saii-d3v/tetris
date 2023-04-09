@@ -2,15 +2,30 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #959595;
+}
+
+.wrapper {
+    background-color: #959595;
+}
+
 .container {
     display: flex;
     gap: 50px;
 }
 
+#start-btn {
+    margin-bottom: 10px;
+}
+
 .game-field {
     width: 200px;
     height: 400px;
-    background-color: gray;
+    background-color: #707070;
     display: flex;
     flex-wrap: wrap;
 }
@@ -23,7 +38,7 @@
 .preview-field {
     width: 80px;
     height: 80px;
-    background-color: gray;
+    background-color: #707070;
     display: flex;
     flex-wrap: wrap;
 }

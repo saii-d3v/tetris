@@ -18,6 +18,39 @@ body {
     gap: 50px;
 }
 
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.movement-buttons {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#up-btn {
+    grid-column-start: 2;
+}
+
+#left-btn {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#right-btn {
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+#down-btn {
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
 #start-btn {
     margin-bottom: 10px;
 }

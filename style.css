@@ -21,7 +21,7 @@ body {
 .inner {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 150px;
 }
 
 .movement-buttons {

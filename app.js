@@ -249,11 +249,11 @@ leftBtn.addEventListener('click', moveLeft)
 rightBtn.addEventListener('click', moveRight)
 downBtn.addEventListener('click', moveDown)
 
-// prevent zoom on phones
-upBtn.addEventListener('dblclick', (e) => e.preventDefault())
-leftBtn.addEventListener('dblclick', (e) => e.preventDefault())
-rightBtn.addEventListener('dblclick', (e) => e.preventDefault())
-downBtn.addEventListener('dblclick', (e) => e.preventDefault())
+// // prevent zoom on phones
+// upBtn.addEventListener('dblclick', (e) => e.preventDefault())
+// leftBtn.addEventListener('dblclick', (e) => e.preventDefault())
+// rightBtn.addEventListener('dblclick', (e) => e.preventDefault())
+// downBtn.addEventListener('dblclick', (e) => e.preventDefault())
 
 
 function lockControls() {

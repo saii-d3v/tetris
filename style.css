@@ -28,6 +28,8 @@ body {
     display: grid;
     grid-template-columns: 30px 30px 30px;
     grid-template-rows: 30px 30px 30px;
+    row-gap: 10px;
+    column-gap: 10px;
     text-align: center;
 }
 

@@ -295,6 +295,7 @@ function finalBlockControls() {
     document.removeEventListener('keyup', movementsHandler)
     document.removeEventListener('keyup', startPauseHandler) // block spacebar handler
     startBtn.setAttribute('disabled', 'disabled')            // disable startBtn
+    lockControls()
 }
 
 function gameOver() {

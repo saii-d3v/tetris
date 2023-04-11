@@ -1,3 +1,5 @@
+no canvas tetris
+
 https://saii-d3v-tetris.netlify.app
 
 arrowUp/W - rotate 
